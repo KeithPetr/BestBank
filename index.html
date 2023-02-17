@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>BestBank</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="bank-container">
+        <h1 class="title">BestBank</h1>
+        <div class="nav-bar">
+          <button type="button" class="menu-button" id="menu-btn">Menu</button>
+          <ul class="nav-list" id="nav-list">
+            <li class="nav-item">Home</li>
+            <li class="nav-item">Payments</li>
+            <li class="nav-item">Savings</li>
+            <li class="nav-item">Financing</li>
+            <li class="nav-item">Stocks</li>
+          </ul>
+        </div>
+        <div class="display-container">
+          <div class="action-buttons">
+            <button type="button" class="btn">Pay</button>
+            <button type="button" class="btn">Transfer</button>
+          </div>
+          <h2 class="accounts-title">Accounts</h2>
+          <div class="accounts" id="accounts"></div>
+          <h1 class="spending-title" id="spending-title"></h1>
+          <div class="spent-list" id="spent-list"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="index.js" type="module"></script>
+</html>

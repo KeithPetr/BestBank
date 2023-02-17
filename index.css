@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: 2em auto 0;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+.bank-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    width: 100%;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+    padding: .5em 0;
+}
+
+.nav-bar {
+    width: 100%;
+    background: #FFD18C;
+    padding: .5em 1.25em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-button {
+    background: #b5b2b2;
+    color: #FFFFFF;
+    border: none;
+    padding: .2em 1.5em;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.nav-list {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    display: none;
+}
+
+.nav-item {
+    margin-top: .5em;
+}
+
+.display-container {
+    background: #FFFBEB;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 750px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+    padding-top: 1em;
+    width: 70%;
+}
+
+.btn {
+    padding: .75em 0;
+    border: 5px solid #FFA724;
+    border-radius: 15px;
+    background: #FFFFFF;
+    width: 48%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.accounts-title {
+    margin-bottom: 1em;
+}
+
+.accounts {
+    width: 80%;
+}
+
+.account {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+    background: #FFFFFF;
+    padding: .75em 1em;
+    border: 5px solid #FFA724;
+    border-radius: 15px;
+}
+
+.account-title {
+    margin-bottom: .5em;
+}
+
+.spent-list {
+    width: 80%;
+}
+
+.spending {
+    display: flex;
+    justify-content: space-between;
+    background: #FFD18C;
+    border-radius: 15px;
+    padding: .25em .75em;
+    margin-bottom: .5em;
+}
+
+@media (min-width: 480px) {
+    .menu-button {
+        font-size: 1.2rem;
+    }
+}
