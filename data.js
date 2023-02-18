@@ -51,12 +51,12 @@ export const accounts = [
         balance: "36500.12",
         spendings: [
             {
-                category: "E-Transfer",
-                spent: "45.50"
-            },
-            {
                 category: "Cash Deposit",
                 spent: "100.00"
+            },
+            {
+                category: "E-Transfer",
+                spent: "45.50"
             }
         ]
     }

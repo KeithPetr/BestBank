@@ -1,131 +1,271 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
+  margin: 0;
+  font-family: "Inter", sans-serif;
 }
 
 .container {
-    width: 90%;
-    margin: 2em auto 0;
-    border: 5px solid black;
-    border-radius: 10px;
+  width: 90%;
+  margin: 2em auto 1em;
+  border: 5px solid black;
+  border-radius: 10px;
+  max-width: 1600px;
+  min-width: 320px;
 }
 
 .bank-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+/* ----- BEST BANK TITLE ----- */
 
 h1 {
-    text-align: center;
-    width: 100%;
-    font-family: 'Overpass', sans-serif;
-    font-weight: 700;
-    padding: .5em 0;
+  text-align: center;
+  width: 100%;
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  padding: 0.5em 0;
 }
 
+/* ----- Menu/Navigation ----- */
+
 .nav-bar {
-    width: 100%;
-    background: #FFD18C;
-    padding: .5em 1.25em;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  background: #ffd18c;
+  padding: 0.5em 1.25em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .menu-button {
-    background: #b5b2b2;
-    color: #FFFFFF;
-    border: none;
-    padding: .2em 1.5em;
-    font-weight: 700;
-    font-size: 1rem;
+  background: #b5b2b2;
+  color: #ffffff;
+  border: none;
+  padding: 0.2em 1.5em;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 3px;
+  margin: .5em 0;
+}
+
+.menu-button:hover {
+    cursor: pointer;
 }
 
 .nav-list {
-    list-style: none;
-    text-align: center;
-    padding: 0;
-    display: none;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  display: none;
 }
 
 .nav-item {
-    margin-top: .5em;
+  margin-top: 0.5em;
 }
+
+.nav-item:hover {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    cursor: pointer;
+  }
 
 .display-container {
-    background: #FFFBEB;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 750px;
+  background: #fffbeb;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
 }
 
+/* ----- PAY AND TRANSER BUTTONS ----- */
+
 .action-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1em;
-    padding-top: 1em;
-    width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  width: 70%;
 }
 
 .btn {
-    padding: .75em 0;
-    border: 5px solid #FFA724;
-    border-radius: 15px;
-    background: #FFFFFF;
-    width: 48%;
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
+  padding: 0.75em 0;
+  border: 5px solid #ffa724;
+  border-radius: 50px;
+  background: #ffffff;
+  width: 48%;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.btn:hover {
+    background: #F59E0B;
+    cursor: pointer;
+}
+
+/* ----- ACCOUNTS AND TRANSACTIONS DISPLAYS ----- */
+
+.grid-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .accounts-title {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
+}
+
+.account-title:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    color: blue;
 }
 
 .accounts {
-    width: 80%;
+  width: 80%;
 }
 
 .account {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 1em;
-    background: #FFFFFF;
-    padding: .75em 1em;
-    border: 5px solid #FFA724;
-    border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1em;
+  background: #ffffff;
+  padding: 0.75em 1em;
+  border: 5px solid #ffa724;
+  border-radius: 15px;
+}
+
+p {
+  padding: 0;
+  margin: 0;
 }
 
 .account-title {
-    margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 .spent-list {
-    width: 80%;
+  width: 80%;
 }
 
 .spending {
-    display: flex;
-    justify-content: space-between;
-    background: #FFD18C;
-    border-radius: 15px;
-    padding: .25em .75em;
-    margin-bottom: .5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffd18c;
+  border-radius: 15px;
+  padding: 0.25em 0.75em;
+  margin-bottom: 0.5em;
 }
 
+.sub-heading {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+/* ----- MEDIA QUERIES ----- */
+
 @media (min-width: 480px) {
-    .menu-button {
-        font-size: 1.2rem;
-    }
+  body {
+    font-size: 1.2rem;
+  }
+
+  .account {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .account-title {
+    margin: 0;
+  }
+
+  .menu-button {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 700px) {
+  body {
+    font-size: 1.2rem;
+  }
+
+  .menu-button {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 1.5rem;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .nav-bar {
+    flex-direction: row;
+  }
+
+  .nav-list {
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+  }
+
+  .nav-item {
+    margin: 0;
+  }
+
+}
+
+@media (min-width: 900px) {
+
+  body {
+    font-size: 1.4rem;
+  }
+
+  .grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "titleOne titleTwo"
+      "contentOne contentTwo";
+  }
+
+  .accounts-title {
+    grid-area: titleOne;
+    justify-self: center;
+  }
+
+  .accounts {
+    grid-area: contentOne;
+    justify-self: center;
+  }
+
+  .spending-title {
+    grid-area: titleTwo;
+    justify-self: center;
+  }
+
+  .spent-list {
+    grid-area: contentTwo;
+    justify-self: center;
+  }
 }

@@ -4,7 +4,7 @@ const menuBtn = document.getElementById("menu-btn");
 const navList = document.getElementById("nav-list");
 const accountList = document.getElementById("accounts");
 const spentList = document.getElementById("spent-list");
-const spendingsTitle = document.getElementById('spending-title')
+const spendingsTitle = document.getElementById("spending-title");
 
 function showMenu() {
   if (navList.style.display === "none") {
@@ -32,41 +32,29 @@ function renderAccounts() {
 document.addEventListener("click", function (e) {
   let string = "";
   let data = "";
-  if (e.target.textContent === "Savings") {
+  if (e.target.textContent === "Main Account") {
+    spendingsTitle.textContent = "Main Account";
+  } else if (e.target.textContent === "Expenses") {
+    spendingsTitle.textContent = "Expenses";
+  } else if (e.target.textContent === "Savings") {
     spendingsTitle.textContent = "Savings";
-    for (let i = 0; i < accounts.length; i++) {
-      if (e.target.textContent == accounts[i].title) {
-        data = accounts[i].spendings;
-        for (let j = 0; j < data.length; j++) {
-          string += `
-                    <div class="spending" id="spending">
-                        <p class="spending-title">${data[j].category}</p>
-                        <div class="spending-amount" id="spending-amount">$${data[j].spent}</div>
-                    </div>
-                    `;
-          console.log(data[j].category);
-        }
-        spentList.innerHTML = string;
-        console.log(data);
+  }
+
+  for (let i = 0; i < accounts.length; i++) {
+    if (e.target.textContent == accounts[i].title) {
+      data = accounts[i].spendings;
+      for (let j = 0; j < data.length; j++) {
+        string += `
+        <div class="spending" id="spending">
+            <p class="spending-description">${data[j].category}</p>
+            <div class="spending-amount" id="spending-amount">$${data[j].spent}</div>
+        </div>
+        `;
       }
-    }
-  } else {
-    for (let i = 0; i < accounts.length; i++) {
-        spendingsTitle.textContent = "Spendings";
-      if (e.target.textContent == accounts[i].title) {
-        data = accounts[i].spendings;
-        for (let j = 0; j < data.length; j++) {
-          string += `
-                    <div class="spending" id="spending">
-                        <p class="spending-title">${data[j].category}</p>
-                        <div class="spending-amount" id="spending-amount">$${data[j].spent}</div>
-                    </div>
-                    `;
-          console.log(data[j].category);
-        }
-        spentList.innerHTML = string;
-        console.log(data);
-      }
+      spentList.innerHTML = `
+      <h3 class="sub-heading">Transactions</h3>
+      ${string}
+      `;
     }
   }
 });
