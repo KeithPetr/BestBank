@@ -5,12 +5,13 @@ const navList = document.getElementById("nav-list");
 const accountList = document.getElementById("accounts");
 const spentList = document.getElementById("spent-list");
 const spendingsTitle = document.getElementById("spending-title");
+const container = document.querySelector("container");
 
 function showMenu() {
-  if (navList.style.display === "none") {
-    navList.style.display = "block";
-  } else {
+  if (navList.style.display === "flex") {
     navList.style.display = "none";
+  } else {
+    navList.style.display = "flex";
   }
 }
 
